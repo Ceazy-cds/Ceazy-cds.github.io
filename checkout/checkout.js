@@ -17,6 +17,7 @@
   }
 
   const paymentLink = new URLSearchParams(window.location.search).has("_ptxn");
+  const claim = new URLSearchParams(window.location.hash.slice(1)).get("claim");
   let completed = false;
   const checkoutError = () => {
     button.disabled = paymentLink;
@@ -60,7 +61,11 @@
     button.disabled = true;
     status.textContent = "Apertura del checkout…";
     try {
-      paddle.Checkout.open({ items: [{ priceId, quantity: 1 }] });
+      const options = { items: [{ priceId, quantity: 1 }] };
+      if (/^[a-f0-9]{64}$/.test(claim ?? "")) {
+        options.customData = { cs_sandbox_claim: claim };
+      }
+      paddle.Checkout.open(options);
     } catch {
       checkoutError();
     }
