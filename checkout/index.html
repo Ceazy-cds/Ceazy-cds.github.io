@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Quiz Patente C/CE Premium · CS Store Sandbox</title>
+  <style>
+    body { margin: 0; background: #101522; color: #f5f7fc; font: 1rem/1.55 system-ui, sans-serif; }
+    header, main { width: min(40rem, calc(100% - 2rem)); margin: 1.5rem auto; }
+    a { color: #9dd9ff; }
+    main { box-sizing: border-box; padding: clamp(1.25rem, 5vw, 3rem); background: #1a2335; border: 1px solid #35435a; border-radius: 1rem; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; margin: .5rem 0 1rem; }
+    .price { font-size: 1.25rem; }
+    button { padding: .8rem 1rem; border: 0; border-radius: .5rem; background: #9dd9ff; color: #101522; font: inherit; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .65; cursor: default; }
+  </style>
+  <script defer src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script defer src="checkout.js"></script>
+</head>
+<body>
+  <header><a href="../#quiz-patente">← CS Studio</a></header>
+  <main>
+    <p>CS Store · Paddle Sandbox</p>
+    <h1>Quiz Patente C/CE Premium</h1>
+    <p>Accesso a tutti i quesiti e rimozione degli annunci nell’app Android.</p>
+    <p class="price"><strong>8,19 €</strong> imposte escluse · Pagamento una tantum</p>
+    <p>Paddle calcola le imposte nel riepilogo. L’acquisto di prova non addebita denaro e non sblocca Premium nell’app.</p>
+    <button id="pay" type="button" disabled>Apri il checkout di prova</button>
+    <p id="status" role="status">Caricamento del checkout…</p>
+    <noscript>Attiva JavaScript per aprire il checkout di prova.</noscript>
+  </main>
+</body>
+</html>
